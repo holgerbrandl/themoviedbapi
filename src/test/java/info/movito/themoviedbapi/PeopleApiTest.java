@@ -16,6 +16,22 @@ import static org.junit.Assert.*;
 
 public class PeopleApiTest extends AbstractTmdbApiTest {
 
+    @Test
+    public void testGetPersonRuInfo(){
+        PersonPeople result = tmdb.getPeople().getPersonInfo(LANGUAGE_RUSSIAN, ID_PERSON_BRUCE_WILLIS);
+        assertTrue("Wrong language returned", result.getBiography().contains(BRUCE_WILLIS_RU_BIOGRAPHY_CONTAINS));
+    }
+    @Test
+    public void testGetCombinedCreditsRu(){
+        PersonCredits result = tmdb.getPeople().getCombinedPersonCredits(ID_PERSON_BRUCE_WILLIS, LANGUAGE_RUSSIAN);
+        for (PersonCredit credit : result.getCast()) {
+            if (credit.getMovieTitle().equals(FOUR_ROOMS_RU_TITLE)) {
+                assertTrue("Wrong language returned", true);
+                break;
+            }
+        }
+
+    }
 
     @Test
     public void testGetPersonInfo() {

@@ -17,7 +17,9 @@ public class AbstractTmdbApiTest {
 
     protected static final int ID_COLLECTION_STAR_WARS = 10;
 
-    protected static final int ID_PERSON_BRUCE_WILLIS = 62;    
+    protected static final int ID_PERSON_BRUCE_WILLIS = 62;
+    protected static final String BRUCE_WILLIS_RU_BIOGRAPHY_CONTAINS = "Брюс Уиллис";
+    protected static final String FOUR_ROOMS_RU_TITLE = "Четыре комнаты";
 
     protected static final int ID_COMPANY = 2;
     protected static final String COMPANY_NAME = "Marvel Studios";
